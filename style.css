@@ -1,4 +1,54 @@
-*{
+#score { text-align: center; }
+
+#game {
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
+  margin: auto;
+  background-image: url("assets/backgound.jpg");
+  background-size: cover;
+}
+
+#character {
+  height: 75px;
+  width: 75px;
+  top: 225px;
+  position: relative;
+  background-image: url("assets/kennedy.gif");
+  background-size: cover;
+}
+
+#cupcake {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 175px;
+  left: 550px;
+  background-image: url("assets/cupcake.png");
+  background-size: cover;
+  animation: cupcake 1.33s infinite;
+}
+
+@keyframes cupcake {
+  0%{left: 550px;}
+  100%{left: -50px;}
+}
+
+.jump-animation {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0%{top: 225px;}
+  50%{top: 75px;}
+  75%{top: 75px;}
+  100%{top: 225px;}
+}
+
+
+
+
+/* *{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -43,8 +93,8 @@
 
    
 
-} */
-#character{
+/* } */
+/* #character{
     position:absolute;
     left: 15%;
     bottom: 15px;
@@ -73,5 +123,4 @@
 @keyframes cupcake{
     0%{left: px}
     100%{left: -40px}
-}
-/* @midiaqueris */
+} */

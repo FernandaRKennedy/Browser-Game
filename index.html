@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <title>Kennedy Game</title>
-    <link rel="stylesheet" href="style.css">
-    <element onclick="jump()">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1><strong> hello again </strong></h1>
-    </div>
-   
-    <div class="game">
-        <div>
-            <!-- <div class="start-screen" data-start-screen>Press Any Key To Start</div> -->
-           <h3 id="score">0 </h3>
-            <img id="background"
-            src="assets/backgound.jpg"
-            alt="background picture">
-            
-            <img id="clouds"
-            src="assets/clouds.png"
-            alt="clouds picture">
-
-            <img id="character"
-            src="assets/kennedy.gif"
-            alt="character gif">
-    
-            <img id="cupcake"
-            src="assets/cupcake.png"
-            alt="cupcake picture">
-        </div>
-       
-    </div>
+  <div id="game">
+    <div id="character"></div>
+    <div id="cupcake"></div>
+  </div>
+  <h1 id="score">0</h1>
+  <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
