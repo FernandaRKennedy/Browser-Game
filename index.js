@@ -15,13 +15,49 @@ document.addEventListener('keypress', () => {
   if (!character.classList.contains('jump-animation')) {
     jump();
   }
-});
+}) 
+
+
+setInterval(() => {
+  const characterTop = parseInt(window.getComputedStyle(character)
+    .getPropertyValue('top'));
+  const cupcakeLeft = parseInt(window.getComputedStyle(cupcake)
+    .getPropertyValue('left'));
+  score.innerText++;
+
+  if (cupcakeLeft < 0) {
+    cupcake.style.display = 'none';
+  } else {
+    cupcake.style.display = '';
+  }
+
+  if (cupcakeLeft < 50 && cupcakeLeft > 0 && characterTop > 150) {
+    alert("You got a score of: " + score.innerText +
+      "\n\nPlay again?");
+    location.reload();
+  }
+}, 50);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// old code //
+
+
 
 
 // const character = document.getElementById("character");
 // const cupcake = document.getElementById("cupcake");
 // const score= documet.getElementById("score");
-//   //  debugger; 
 // function jump(){
 // 	character.classList.add("jump-animation");
 // 	setTimeout=>

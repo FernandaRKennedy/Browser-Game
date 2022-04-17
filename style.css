@@ -1,9 +1,8 @@
 #score { text-align: center; }
 
 #game {
-  width: 600px;
+  width: ;
   height: 300px;
-  border: 2px solid black;
   margin: auto;
   background-image: url("assets/backgound.jpg");
   background-size: cover;
