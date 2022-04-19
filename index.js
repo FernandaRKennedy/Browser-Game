@@ -8,7 +8,7 @@ function jump() {
   character.classList.add('jump-animation');
   setTimeout(() => {
     character.classList.remove('jump-animation');
-   }, 500);
+   }, 1500);
 }
 //adding key function for the jump
 document.addEventListener('keypress', () => {
@@ -29,15 +29,15 @@ setInterval(() => {
     cupcake.style.display = 'none';
   } else {
     cupcake.style.display = '';
-  }
+}
 
+// debugger;
 //colision detection
-  if (cupcakeLeft < 100 && cupcakeLeft > 0 && characterTop >= 620) {
+  if (cupcakeLeft <  320 && cupcakeLeft > 0 && characterTop >= 710) {
     console.log(characterTop)
     console.log(cupcakeLeft)
-    //alert window
-    // alert("Your score is: " + score.innerText +
-    //   "\n\nPlay again?");
-    // location.reload();
+    alert("Your score is: " + score.innerText +
+      "\n\nPlay again?");
+    location.reload();
   }
 }, 50);

@@ -12,8 +12,9 @@
 #nuvem{
     width:800px;
     height: 300px;
-    position: absolute;
-    /* object-position: right; */
+    position: relative;
+    right: 600px;;
+
     background-image: url("assets/clouds.png");
    animation: 3.8s nuvem infinite;
 }
@@ -21,23 +22,27 @@
     0% {
         right: 0;
         top: 150px;
+        /* left:0; */
         -webkit-animation-timing-function:cubic-bezier(0.5, 0.3, 0.8, 1);
     }
+
     50% {
         top: 200px;
+        right:300px;
     }
     100% {
-        right:700px;
+        right:-500px;
         top: 150px;
+        left:400px;
         -webkit-animation-timing-function: ease-out;
     }
 }
 #character {
   height: 268px;
   width: 135px;
-  top: 620px;
-  left: 80px;
-  position: relative;
+  top: 710px;
+  left: 300px;
+  position: absolute;
   background-image: url("assets/kennedy.gif");
   background-size: cover;
 }
@@ -45,17 +50,17 @@
 #cupcake {
   width: 100px;
   height: 90px;
-  position: relative;
-  top:530px;
-  left: 750px;
+  position: absolute;
+  top:885px;
+  left: 900px;
   background-image: url("assets/cupcake.png");
   background-size: cover;
-  animation: cupcake 2.5s infinite;
+  animation: cupcake 2s infinite;
 }
 
 @keyframes cupcake {
-  0%{left: 1500px;}
-  100%{left: -250px;}
+  0%{left: 1650px;}
+  100%{left: 158px;}
 }
 
 .jump-animation {
@@ -63,7 +68,7 @@
 }
 
 @keyframes jump {
-  0%{top: 568px;}
-  50%{top: 250px;}
-  100%{top: 568px;}
+  0%{top: 710px;}
+  50%{top: 355px;}  
+  100%{top: 710px;}
 }
