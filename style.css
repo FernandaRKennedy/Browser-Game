@@ -1,8 +1,8 @@
-#score { text-align: center; }
+#score { text-align: right; }
 
 #game {
   width: 1602px;
-  height: 918px;
+  height: 800px;
   border: 2px solid black;
   margin: auto;
   background-image: url("assets/backgound.jpg");
@@ -13,34 +13,33 @@
     width:800px;
     height: 300px;
     position: relative;
-    right: 600px;;
-
+   left:800px;
     background-image: url("assets/clouds.png");
    animation: 3.8s nuvem infinite;
 }
 @keyframes nuvem{
     0% {
-        right: 0;
-        top: 150px;
-        /* left:0; */
-        -webkit-animation-timing-function:cubic-bezier(0.5, 0.3, 0.8, 1);
+        left: 0;
+      
+        top: 100px;
+        -webkit-animation-timing-function:cubic-bezier(0, 0.3, 0.8, 0.5);
     }
 
     50% {
-        top: 200px;
-        right:300px;
+        top: 150px;
+        right: 20%;
     }
     100% {
-        right:-500px;
-        top: 150px;
-        left:400px;
-        -webkit-animation-timing-function: ease-out;
+        /* right:0; */
+        top: 100px;
+        /* left: 0; */
+        -webkit-animation-timing-function: ease-out; 
     }
 }
 #character {
   height: 268px;
   width: 135px;
-  top: 710px;
+  top: 640px;
   left: 300px;
   position: absolute;
   background-image: url("assets/kennedy.gif");
@@ -51,16 +50,17 @@
   width: 100px;
   height: 90px;
   position: absolute;
-  top:885px;
-  left: 900px;
+  top:820px;
+  left: px;
   background-image: url("assets/cupcake.png");
   background-size: cover;
   animation: cupcake 2s infinite;
+  
 }
 
 @keyframes cupcake {
-  0%{left: 1650px;}
-  100%{left: 158px;}
+  0%{left: 1602px;}
+  100%{left: 155px;}
 }
 
 .jump-animation {
@@ -68,7 +68,7 @@
 }
 
 @keyframes jump {
-  0%{top: 710px;}
-  50%{top: 355px;}  
-  100%{top: 710px;}
+  0%{top: 590px;}
+  50%{top: 230px;}  
+  100%{top: 590 px;}
 }

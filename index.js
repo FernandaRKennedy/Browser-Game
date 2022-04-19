@@ -33,7 +33,7 @@ setInterval(() => {
 
 // debugger;
 //colision detection
-  if (cupcakeLeft <  320 && cupcakeLeft > 0 && characterTop >= 710) {
+  if (cupcakeLeft <  320 && cupcakeLeft > 0 && characterTop >= 640) {
     console.log(characterTop)
     console.log(cupcakeLeft)
     alert("Your score is: " + score.innerText +
