@@ -52,7 +52,7 @@ body {
     position: absolute;
    left:100%;
     background-image: url("assets/clouds.png");
-   animation: 3.8s nuvem infinite linear ;
+   animation: 10s nuvem infinite linear ;
 }
 @keyframes nuvem{
     0% {
@@ -61,11 +61,14 @@ body {
     
     }
 
-    50% {
+    /* 50% {
         top: 50px;
         left: 50%; 
     } 
-  
+   75%{
+     top: 50px;
+     left: 10%;
+   } */
     100% {
        left: -50%;
         top: 70px;
