@@ -1,3 +1,29 @@
+// const GAME_WIDTH = 800
+// const GAME_HEIGHT = 300
+
+
+// const gameElem = document.querySelector("[data-game]")
+// const scoreElem = document.querySelector("[data-score]")
+// const startScreenElem = document.querySelector("[data-start-screen]")
+
+// setPixelToWorldScale()
+// window.addEventListener("resize", setPixelToGamedScale)
+// document.addEventListener("keydown", handleStart, { once: true })
+
+// function setPixelToGameScale() {
+//   let gameToPixelScale
+//   if (window.innerWidth / window.innerHeight < GAME_WIDTH / GAME_HEIGHT) {
+//     gameToPixelScale = window.innerWidth / GAME_WIDTH
+//   } else {
+//     gameToPixelScale = window.innerHeight / GAME_HEIGHT
+//   }
+
+//   gameElem.style.width = `${GAME_WIDTH * gameToPixelScale}px`
+//   gameElem.style.height = `${GAME_HEIGHT * gameToPixelScale}px`
+// }
+
+
+
 //defining
 const character = document.getElementById('character');
 const cupcake = document.getElementById('cupcake');
@@ -33,7 +59,7 @@ setInterval(() => {
 
 // debugger;
 //colision detection
-  if (cupcakeLeft <  320 && cupcakeLeft > 0 && characterTop >= 520) {
+  if (cupcakeLeft <  300 && cupcakeLeft > 0 && characterTop >= 520) {
     console.log(characterTop)
     console.log(cupcakeLeft)
     alert("Your score is: " + score.innerText +

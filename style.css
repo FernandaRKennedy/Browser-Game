@@ -1,3 +1,40 @@
+/* *, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1700px;
+}
+
+.world {
+  overflow: hidden;
+  position: relative;
+}
+
+.score {
+  position: absolute;
+  font-size: 60px;
+  right: 20px;
+  top: 20px;
+}
+
+.start-screen {
+  position: absolute;
+  font-size: 96px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+
+
+
+
 #score { text-align: right; }
 
 #game {
@@ -7,39 +44,38 @@
   margin: auto;
   background-image: url("assets/background.jpeg");
   overflow: hidden;
+  position: relative;
 }
 #nuvem{
     width:800px;
     height: 300px;
-    position: relative;
-   left:800px;
+    position: absolute;
+   left:100%;
     background-image: url("assets/clouds.png");
-   animation: 3.8s nuvem infinite;
+   animation: 3.8s nuvem infinite linear ;
 }
 @keyframes nuvem{
     0% {
-        left: 0;
-      
+      left:100%;
         top: 70px;
-        -webkit-animation-timing-function:cubic-bezier(0, 0.3, 0.8, 0.5);
+    
     }
 
     50% {
         top: 50px;
-        right: 20%;
-    }
+        left: 50%; 
+    } 
+  
     100% {
-        /* right:0; */
+       left: -50%;
         top: 70px;
-        /* left: 0; */
-        -webkit-animation-timing-function: ease-out; 
     }
 }
 #character {
   height: 268px;
   width: 135px;
   top: 520px;
-  left: 300px;
+  left: 250px;
   position: absolute;
   background-image: url("assets/kennedy.gif");
   background-size: cover;
@@ -50,16 +86,15 @@
   height: 90px;
   position: absolute;
   top:700px;
-  left: px;
   background-image: url("assets/cupcake.png");
   background-size: cover;
-  animation: cupcake 2s infinite;
+  animation: cupcake 2s infinite linear;
   
 }
 
 @keyframes cupcake {
   0%{left: 1602px;}
-  100%{left: 155px;}
+  100%{left: 15px;}
 }
 
 .jump-animation {
