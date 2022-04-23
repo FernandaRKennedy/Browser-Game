@@ -22,16 +22,30 @@
 //   gameElem.style.height = `${GAME_HEIGHT * gameToPixelScale}px`
 // }
 
-
-
+const sfx = {
+  jump : new Howl({
+    src: [
+      'https://assets.codepen.io/21542/howler-sfx-levelup.mp3'
+    ]
+}),
+}
+// const music = {
+//   overworld: new Howl({
+//      src: [
+//         "https://assets.codepen.io/21542/howler-demo-bg-music.mp3"
+//      ]
+//   })
+// }
 //defining
 const character = document.getElementById('character');
 const cupcake = document.getElementById('cupcake');
 const score = document.getElementById('score');
 
+
 //function jump
 function jump() {
   character.classList.add('jump-animation');
+  sfx.jump.play();
   setTimeout(() => {
     character.classList.remove('jump-animation');
    }, 1500);
@@ -50,7 +64,6 @@ setInterval(() => {
   const cupcakeLeft = parseInt(window.getComputedStyle(cupcake)
     .getPropertyValue('left'));
   score.innerText++;
-
   if (cupcakeLeft < 0) {
     cupcake.style.display = 'none';
   } else {
@@ -59,11 +72,13 @@ setInterval(() => {
 
 // debugger;
 //colision detection
-  if (cupcakeLeft <  300 && cupcakeLeft > 0 && characterTop >= 520) {
+
+  if (cupcakeLeft <  280 && cupcakeLeft > 0 && characterTop >= 520) {
     console.log(characterTop)
     console.log(cupcakeLeft)
     alert("Your score is: " + score.innerText +
       "\n\nPlay again?");
     location.reload();
+  
   }
 }, 50);
