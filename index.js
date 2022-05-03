@@ -25,7 +25,7 @@
 const sfx = {
   jump : new Howl({
     src: [
-      'https://assets.codepen.io/21542/howler-sfx-levelup.mp3'
+      'audio/jump.wav'
     ]
 }),
 }
@@ -73,7 +73,7 @@ setInterval(() => {
 // debugger;
 //colision detection
 
-  if (cupcakeLeft <  280 && cupcakeLeft > 0 && characterTop >= 520) {
+  if (cupcakeLeft < 320 && cupcakeLeft > 0 && characterTop >= 520) {
     console.log(characterTop)
     console.log(cupcakeLeft)
     alert("Your score is: " + score.innerText +
