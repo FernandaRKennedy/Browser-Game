@@ -1,5 +1,5 @@
 Kennedy Game
-This game is a replication of the Google  Dino game. Was a challenge and a pleasure to make it. 
+This game is a replication of the Google Dino game. It was a challenge and a pleasure to make it. 
 Instructions:
-Use your nab bar to jump the cupcake. Is the character doesn’t jump  will be game over. 
-The game is yet not functional for cellphones. Please use your desktop to use it correctly.
+Use your space bar to jump over the cupcake. If the character does not jump and collides with the cupcake then the game will be over. 
+The game is not yet functional for cellphones. Please use your desktop to use it correctly.
