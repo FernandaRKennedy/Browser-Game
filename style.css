@@ -1,57 +1,69 @@
+ 
+/* import a web font */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka+One&display=swap');
+ 
  *, *::before, *::after {
   box-sizing: border-box;
   user-select: none;
-}
-/* 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 1700px;
-}
 
-.world {
-  overflow: hidden;
-  position: relative;
-}
-
-.score {
-  position: absolute;
-  font-size: 60px;
-  right: 20px;
-  top: 20px;
-}
-
-.start-screen {
-  position: absolute;
-  font-size: 96px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-
- */
-
+  
+ }
 
 #score { text-align: right; }
 
+
+
+#startButton {
+  position: absolute;
+  font-size: 50px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#ffddc0e0;
+  z-index: 5;
+}
 #game {
-  width: 1602px;
+  width: auto;
   top: auto;
-  height: 800px;
+  height: 900px;
   border: 2px solid black;
   margin: auto;
-  background-image: url("assets/background.jpeg");
+  /* background-image: url("assets/background.jpeg"); */
   overflow: hidden;
   position: relative;
 }
+ #backgroundIMG{
+  width: 30000px;
+  height: 700px;
+  background: url("assets/background.jpeg") repeat-x; 
+  animation: slide 60s linear infinite;
+  z-index: -5;
+ }
+
+ @keyframes slide{
+0%{
+  transform: translate3d(0,0,0);
+}
+100%{
+  transform: translate3d(-1692px,0,0);
+}
+   /* 0% {
+    left:100%;
+    background-position-x:0%;
+  
+  
+  }
+  100% {
+    background-position-x:100%;
+  } */
+   
+ } 
 #nuvem{
     width:800px;
     height: 300px;
     position: absolute;
-   left:100%;
+    left:100%;
+    background-size: cover;
     background-image: url("assets/clouds.png");
    animation: 10s nuvem infinite linear ;
 }
@@ -61,41 +73,73 @@ body {
         top: 70px;
     
     }
-
-    /* 50% {
-        top: 50px;
-        left: 50%; 
-    } 
-   75%{
-     top: 50px;
-     left: 10%;
-   } */
-    100% {
+    100% { 
        left: -50%;
         top: 70px;
     }
 }
 #character {
+  height: 400px;
+  width: 300px;
+  top: 470px;
+  left: 78px;
+  position: absolute;
+  background-image: url("assets/blink570.gif");
+  background-size: cover;
+}
+#walking {
   height: 268px;
   width: 135px;
   top: 520px;
-  left: 250px;
+  left: 190px;
   position: absolute;
   background-image: url("assets/kennedy.gif");
   background-size: cover;
 }
-
+#jumping {
+  background-image: url("assets/jumping.gif ");
+}
 #cupcake {
   width: 100px;
   height: 90px;
   position: absolute;
   top:700px;
-  left:280;
+  left:400px;
   background-image: url("assets/cupcake.png");
   background-size: cover;
   animation: cupcake 2s infinite linear;
   
 }
+
+#gameOver {
+ position: absolute;
+ font-size: 100px;
+ top: 62%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ color:#ffddc0e0;
+ z-index: 5;
+}
+
+#overImage{
+  width: 1000px;
+  height: 800px;
+  background: no-repeat url('assets/stink-look-ugh.gif');
+  position: absolute;
+  top: 52%;
+  left: 69%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* @media screen and (min-width: 1000px)  {
+
+   #game{
+  flex-direction: row;
+  flex-wrap: wrap;
+   }
+
+
+ } */
 
 @keyframes cupcake {
   0%{left: 1602px;}
@@ -112,3 +156,4 @@ body {
   50%{top: 230px;}  
   100%{top: 520px;}
 }
+
