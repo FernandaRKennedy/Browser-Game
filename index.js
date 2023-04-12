@@ -42,7 +42,7 @@ function start() {
       cupcake.style.display = 'none';
     }
     //colision detection
-    if (cupcakeLeft < 360 && cupcakeLeft > 0 && characterTop >= 520  ) {
+    if (cupcakeLeft < 332 && cupcakeLeft > 0 && characterTop >= 520  ) {
       console.log(characterTop)
       console.log(cupcakeLeft)
       sfx.die.play();
@@ -57,14 +57,8 @@ function jump() {
   CharacterWalking .classList.add('jump-animation');
   sfx.jump.play();
   setTimeout(() => {
-  CharacterWalking .classList.remove('jump-animation');
+  CharacterWalking.classList.remove('jump-animation');
   }, 1500);
-}
-
-function handlejump(){
-  if (!moving.classList.contains('jump-animation')) {
-        jump();
-      }
 }
 
 function showGameOver() {
@@ -79,6 +73,11 @@ function showGameOver() {
   setTimeout(()=> location.reload(), 3000)
 }
 
+function handlejump(){
+  if (!CharacterWalking.classList.contains('jump-animation')) {
+        jump();
+      }
+}
 //audio
 const sfx = {
   jump : new Howl({
