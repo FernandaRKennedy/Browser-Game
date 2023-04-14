@@ -1,5 +1,6 @@
 //TODO:
 // MAKE THE SCORE SHOW THE HIGH SCORE 
+//INCREASE THE SPEED 
 
 //defining
 let intervalId = undefined;
@@ -20,6 +21,12 @@ const background1 = document.getElementById('background1')
 background1.style.display =  'block';
 const backgroundIMG = document.getElementById('backgroundIMG')
 backgroundIMG.style.display =  'none';
+const die = document.getElementById('die')
+const jump1 = document.getElementById('jump1')  
+
+
+
+
 
 function start() { 
   CharacterWalking .style.display =  'block';
@@ -45,7 +52,7 @@ function start() {
     if (cupcakeLeft < 332 && cupcakeLeft > 0 && characterTop >= 520  ) {
       console.log(characterTop)
       console.log(cupcakeLeft)
-      sfx.die.play();
+      die.play()
       showGameOver()
     }
   }, 50);
@@ -55,7 +62,8 @@ function start() {
 //function jump
 function jump() {
   CharacterWalking .classList.add('jump-animation');
-  sfx.jump.play();
+  // sfx.jump1.play();
+  jump1.play()
   setTimeout(() => {
   CharacterWalking.classList.remove('jump-animation');
   }, 1500);
@@ -68,7 +76,9 @@ function showGameOver() {
   cupcake.remove()
   character.remove()
   score.remove()
+  jump1.setAttribute('src', '')
   document.removeEventListener('keypress', handlejump)
+
   intervalId = undefined;
   setTimeout(()=> location.reload(), 3000)
 }
@@ -76,22 +86,23 @@ function showGameOver() {
 function handlejump(){
   if (!CharacterWalking.classList.contains('jump-animation')) {
         jump();
+
       }
-}
+}  
 //audio
-const sfx = {
-  jump : new Howl({
-    src: [
-      'audio/jump.wav'
-    ]
+// const sfx = {
+//   jump1 : new Howl({
+//     src: [
+//       'audio/jump.wav'
+//     ]
   
-}),
-die : new Howl({
-  src:[
-    'audio/die.wav'
-  ]
-})
-}
+// }),
+// die : new Howl({
+//   src:[
+//     'audio/die.wav'
+//   ]
+// })
+// }
 
 //calling the start and
 document.addEventListener('keypress', (e) =>{
