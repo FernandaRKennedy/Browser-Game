@@ -135,7 +135,7 @@ background: url("assets/background.jpeg")
 
 #gameOver {
   position: absolute;
-  font-size: 70px;
+  font-size: 65 px;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
