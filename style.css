@@ -135,8 +135,8 @@ background: url("assets/background.jpeg")
 
 #gameOver {
   position: absolute;
-  font-size: 65 px;
-  top: 70%;
+  font-size: 65px;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:#282320e0;
@@ -149,7 +149,7 @@ background: url("assets/background.jpeg")
   height: 800px;
   background: no-repeat url('assets/stink-look-ugh.gif');
   position: absolute;
-  top: 52%;
+  top: 50%;
   left: 63%;
   transform: translate(-50%, -50%);
   z-index: 10;
