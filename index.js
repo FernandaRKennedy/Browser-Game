@@ -41,7 +41,7 @@ function start() {
   backgroundIMG.style.display =  'block';
   // ghost.style.display = 'block';
   //adding key function for the jump
-  document.addEventListener('keypress',handlejump ) 
+  document.addEventListener('keydown',handlejump ) 
   //seting parameters for the collision
   intervalId = setInterval(() => {
     const characterTop = parseInt(window.getComputedStyle(CharacterWalking)
@@ -110,7 +110,7 @@ function showGameOver() {
   ghost.remove()
   score.remove()
   jump1.setAttribute('src', '')
-  document.removeEventListener('keypress', handlejump)
+  document.removeEventListener('keydown', handlejump)
 
   intervalId = undefined;
   setTimeout(()=> location.reload(), 3000)
@@ -124,7 +124,7 @@ function handlejump(){
 }  
 
 //calling the start and
-document.addEventListener('keypress', (e) =>{
+document.addEventListener('keydown', (e) =>{
   start() 
 
 })
