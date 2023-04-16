@@ -23,8 +23,11 @@ const backgroundIMG = document.getElementById('backgroundIMG')
 backgroundIMG.style.display =  'none';
 const die = document.getElementById('die')
 const jump1 = document.getElementById('jump1')  
-
-
+let rendomCupcakeInterva
+const ghost = document.getElementById('ghost')
+ghost.style.display =  'none';
+// const cupcake2 = document.getElementById('cupcake2')
+// cupcake2.style.display = 'none';
 
 
 
@@ -36,6 +39,7 @@ function start() {
   nuvem.style.display =  'block';
   background1.style.display = 'none';
   backgroundIMG.style.display =  'block';
+  // ghost.style.display = 'block';
   //adding key function for the jump
   document.addEventListener('keypress',handlejump ) 
   //seting parameters for the collision
@@ -44,29 +48,56 @@ function start() {
     .getPropertyValue('top'));
     const cupcakeLeft = parseInt(window.getComputedStyle(cupcake)
     .getPropertyValue('left'));
+    let ghostLeft
+    // let cupcake2Left
+    // const ghostLeft = parseInt(window.getComputedStyle(ghost)
+    // .getPropertyValue('left'));
     score.innerText++;
     if (cupcakeLeft < 0) {
       cupcake.style.display = 'none';
     }
-    //colision detection
-    if (cupcakeLeft < 332 && cupcakeLeft > 0 && characterTop >= 520  ) {
+    if(score.innerText > 100){
+      ghost.style.display = 'block'
+      ghostLeft = parseInt(window.getComputedStyle(ghost)
+    .getPropertyValue('left'));
+    }
+    // if(score.innerText > 75){
+    //   cupcake2.style.display = 'block'
+    //   cupcake2Left = parseInt(window.getComputedStyle(cupcake2)
+    // .getPropertyValue('left'));
+    // }
+    //colision detection for cupcake
+    if (cupcakeLeft < 280 && cupcakeLeft > 0 && characterTop >= 450 ) {
       console.log(characterTop)
       console.log(cupcakeLeft)
       die.play()
       showGameOver()
     }
-  }, 50);
+
+    //colision detection  for ghost
+    if (ghostLeft < 280 && ghostLeft > 0 && characterTop >= 450 ) {
+      console.log(characterTop)
+      console.log(ghostLeft)
+      die.play()
+      showGameOver()
+    }
+
+    //colision detection  for cupcake2
+    // if (cupcake2Left < 280 && cupcake2Left > 0 && characterTop >= 400 ) {
+    //   console.log(characterTop)
+    //   console.log(cupcake2Left)
+    //   die.play()
+    //   showGameOver()
+    // }
+  }, 70);
 }
 
-
-//function jump
 function jump() {
   CharacterWalking .classList.add('jump-animation');
-  // sfx.jump1.play();
   jump1.play()
   setTimeout(() => {
   CharacterWalking.classList.remove('jump-animation');
-  }, 1500);
+  }, 1700);
 }
 
 function showGameOver() {
@@ -74,7 +105,9 @@ function showGameOver() {
   overImage.style.display =  'block';
   CharacterWalking.remove()
   cupcake.remove()
+  cupcake2.remove()
   character.remove()
+  ghost.remove()
   score.remove()
   jump1.setAttribute('src', '')
   document.removeEventListener('keypress', handlejump)

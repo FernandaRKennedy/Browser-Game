@@ -18,6 +18,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color:hsla(215, 31%, 11%, 0.878);
+  border-radius: white 1em;
   z-index: 5;
   font-family: 'Games', sans-serif;                                                
 }
@@ -90,7 +91,7 @@ background: url("assets/background.jpeg")
   height: 268px;
   width: 135px;
   top: 520px;
-  left: 190px;
+  left: 200px;
   position: absolute;
   background-image: url("assets/kennedy.gif");
   background-size: cover;
@@ -108,13 +109,34 @@ background: url("assets/background.jpeg")
   left:400px;
   background-image: url("assets/cupcake.png");
   background-size: cover;
-  animation: cupcake 2s infinite linear; 
+  animation: cupcake 2.5s infinite linear; 
 }
+#ghost {
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  top:500px;
+  left:400px;
+  background-image: url("assets/ghost.png");
+  background-size: cover;
+  animation: ghost 6s infinite linear; 
+}
+
+/* #cupcake2{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:700px;
+  left:400px;
+  background-image: url("assets/cupcake2.png");
+  background-size: cover;
+  animation: cupcake 4s infinite linear;  
+}  */
 
 #gameOver {
   position: absolute;
-  font-size: 100px;
-  top: 62%;
+  font-size: 70px;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:#282320e0;
@@ -134,13 +156,29 @@ background: url("assets/background.jpeg")
 }
 
 .jump-animation {
-  animation: jump 1.5s;
+  animation: jump 2s;
  
 }
 
 @keyframes cupcake {
-  0%{left: 1602px;}
-  100%{left: 15px;}
+  0%{left: 1800px;}
+  100%{left: 5px;}
+}
+
+@keyframes ghost {
+  0%{
+    left: 1800px;
+    top:700px;
+  }
+
+  50%{
+    top:400px;
+  }
+
+  100%{
+    left: 5px;
+    top: 650px
+  }
 }
 
 @keyframes jump {
