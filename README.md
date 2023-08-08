@@ -1,4 +1,4 @@
-Kennedy Game
+Browser Game
 
 
 This game is a replication of the Google Dino game. It was a challenge and a pleasure to make it. 
